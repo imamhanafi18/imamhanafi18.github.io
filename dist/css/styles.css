@@ -10043,6 +10043,11 @@ hr.light {
     background-color: #91808038;
     /*background-color: transparent;*/
   }
+  #mainNav2 {
+    box-shadow: none;
+    background-color: #fff;
+    /*background-color: transparent;*/
+  }
   #mainNav .navbar-brand {
     color: rgba(0, 0, 0, 0.7);
   }
@@ -10089,6 +10094,17 @@ header.masthead {
 .masthead-buku{
   padding-top: 4rem;
   padding-bottom: calc(10rem - 4.5rem);
+  background: linear-gradient(to bottom, rgba(185, 163, 163, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../assets/img/perpus.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: cover; 
+}
+.masthead-buku2{
+  height: 650px;
+  margin-top: 50px;
+  padding-top: 4rem;
+  padding-bottom: calc(11rem - 4.5rem);
   background: linear-gradient(to bottom, rgba(185, 163, 163, 0.8) 0%, rgba(0, 0, 0, 0.8) 100%), url("../assets/img/perpus.jpg");
   background-position: center;
   background-repeat: no-repeat;
