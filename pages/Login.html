@@ -7,20 +7,38 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body class="app flex-row align-items-center">
-	<div class="jumbotron jumbotron-fluid" style="height: 100%">
-		<div class="container">
-	<div class="row justify-content-center">
-		<div class="col-md-8">
-			<div class="card-group">
+	<div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card-group">
             <div class="card p-4">
               <div class="card-body">
                 <h1>Login</h1>
                 <p class="text-muted">Sign In to your account</p>
-                
-                <form method="POST" action="../controller.php">
-                  <input type="text" name="nama">
-                  <button type="submit" name="tambah" id="tambah">Tambah</button>
-                </form>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="icon-user"></i>
+                    </span>
+                  </div>
+                  <input class="form-control" type="text" id="user" placeholder="Username">
+                </div>
+                <div class="input-group mb-4">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text">
+                      <i class="icon-lock"></i>
+                    </span>
+                  </div>
+                  <input class="form-control" type="password" id="pswd" placeholder="Password">
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <button class="btn btn-primary px-4" id="tambah" onclick="masuk()" type="button">Login</button>
+                  </div>
+                  <div class="col-6 text-right">
+                    <button class="btn btn-link px-0" type="button">Forgot password?</button>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="card text-white bg-primary py-5 d-md-down-none" style="width:44%">
@@ -28,17 +46,14 @@
                 <div>
                   <h2>Sign up</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                  <button type="button" class="btn btn-outline-primary text-white" data-toggle="modal" data-target="#exampleModalCenter">
-				  Register
-				  </button>
+                  <button class="btn btn-primary active mt-3" type="button">Register Now!</button>
                 </div>
               </div>
             </div>
           </div>
-		</div>
-	</div>
-</div>
-	</div>
+        </div>
+      </div>
+    </div>
 
 	<!-- Script JS-->
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -50,6 +65,17 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script type="text/javascript">
+          function masuk(){
+            var nama = document.getElementById("user").value;
+            var paswd = document.getElementById("pswd").value;
+            if(nama == "pegawai" && paswd == "1234"){
+              window.location.href = "../pages/pegawai.html";
+            }else{
+              alert("Username : admin && Password : 1234");
+            }
+          }
+        </script>
 </body>
 </html>
 <!-- Modal -->
